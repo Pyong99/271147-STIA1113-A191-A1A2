@@ -1,0 +1,45 @@
+  Start
+    Declare A=Car Price, B=Down Payment, C=Loan Period, D=Interest Rate
+
+    Print “Car Price (RM):”
+    Input Car Price
+    While the Car Price is less than RM 30,000
+            Print "Please enter Car Price above RM 30,000."
+    End while
+
+    Print “Down Payment (RM):”
+    Input Down Payment
+    While the Down Payment is less than 0
+            Print "Please enter Down Payment at least 0."
+    End while
+
+    Print “Loan Period (Years):”
+    Input Loan Period
+    While the Loan Period is less than 5 years or more than 9 years
+        Print "Please enter Loan Period between 5-9 years."
+    End while
+
+    Print “Interest Rate (%):”
+    Input Interest Rate
+    While the Interest Rate is less than 3% or more than 7%
+        Print "Please enter Interest Rate  between 3-7%."
+    End while
+
+    Calculate Monthly Repayment = [(Car Price-Down Payment)/Loan Period+(Interest Rate/100)*(Car Price -Down Payment)]/12
+    Print Monthly Repayment
+
+    Print "YEARS", "PRINCIPLE", "INTEREST", "BALANCE"
+
+    Calculate Principle = Monthly Repayment*12* relative nth year
+    Calculate Interest = (Interest Rate/100)*(Car Price - Down Payment)*relative nth year
+    Calculate Balance = Principle*(Loan Period - relative nth year)
+
+    Declare int row=0, col=0
+
+    for each row=0 to Loan Period 
+        for each column=0 to length of first row 
+            Print Years, Principal, Interest, Balance
+        end for
+    end for
+
+  End
